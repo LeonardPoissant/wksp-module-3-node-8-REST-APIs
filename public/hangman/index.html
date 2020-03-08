@@ -5,11 +5,24 @@
     <style>
     </style>
 </head>
-<body>
+<body onload="createGame(event)">
     <div class="content">
-        time to get to hanging.... I mean guessing...
+       HANGMAN
     </div>
+  <div id="displayWord" class="displayWord"></div>
+        <form onsubmit="handleGame(event)">
+            <div>
+                <label for="letter">Start a Guessin'</label>
+                <input id="letter" type="text" name="letter" placeholder="_" required/>
+                    <button id='guess-button' type="submit" class='guess-button'>
+                        <div class="lds-facebook"><div></div><div></div><div></div></div>
+                        <span class='button-label'></span>
+                    </button>
+            </div>
+        </form>
+    <div id = "guessedLetters" class="guessedLetters"> Guessed Letters</div>
+    
     <script src="scripts.js"></script>
 </body>
 
-</html>
+</html> 
